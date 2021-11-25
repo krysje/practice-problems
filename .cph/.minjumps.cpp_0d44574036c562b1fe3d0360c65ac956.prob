@@ -1,0 +1,1 @@
+{"name":"Local: minjumps","url":"c:\\Users\\amanb\\Desktop\\Practice Problems\\minjumps.cpp","tests":[{"id":1616512868903,"input":"11\n1 3 5 8 9 2 6 7 6 8 9","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\amanb\\Desktop\\Practice Problems\\minjumps.cpp","group":"local","local":true}

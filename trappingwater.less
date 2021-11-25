@@ -1,0 +1,85 @@
+
+class Solution{
+
+    // Function to find the trapped water between the blocks.
+    public:
+    int trappingWater(int arr[], int n){
+        int maxL = 0, maxR = 0, water = 0;
+        
+     vector<pair<int, int>> vc;
+     
+        for(int j = 1; j < n; j++){
+            int l = j-1, r= j+1;
+            
+            while(l > 0){
+                maxL = max(maxL, arr[l]);
+                l--;
+            }
+            
+            while(r < n){
+                maxR = max(maxR, arr[r]);
+                r++;
+            }
+            
+            vc[j].first = maxL;
+            vc[j].second = maxR;
+        }
+        
+        for(int i = 1; i < n-1; i++){
+            water += min(vc[i].first, vc[i].second) - arr[i]; 
+        } 
+        
+        return water;
+    }
+};
+
+
+class Solution{
+
+    // Function to find the trapped water between the blocks.
+    public:
+    int trappingWater(int arr[], int n){
+        int maxL = 0, maxR = 0, water = 0;
+        
+     vector<pair<int, int>> vc;
+     
+        for(int j = 1; j < n; j++){
+            int l = j-1, r= j+1;
+            
+            while(l > 0){
+                maxL = max(maxL, arr[l]);
+                l--;
+            }
+            
+            while(r < n){
+                maxR = max(maxR, arr[r]);
+                r++;
+            }
+            
+            vc[j].first = maxL;
+            vc[j].second = maxR;
+        }
+        
+        for(int i = 1; i < n-1; i++){
+            water += min(vc[i].first, vc[i].second) - arr[i]; 
+        } 
+        
+        return water;
+    }
+};
+
+int main(){
+    int t;
+    cin>>t;
+
+    while(t--){
+        int n; cin>>n;
+        int a[n];
+
+        for(int i = 0; i < n; i++)
+            cin>>a[i];
+
+        cout<<trappingwater(a,n)<<endl;
+
+    }
+}
